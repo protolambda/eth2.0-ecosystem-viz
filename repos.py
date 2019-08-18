@@ -8,7 +8,7 @@ graph = {
             'https://github.com/ethereum/trinity.git',
         ],
         'nimbus': [
-            'https://github.com/status-im/nimbus.git',
+            # 'https://github.com/status-im/nimbus.git',  # eth1
             'https://github.com/status-im/nim-beacon-chain.git',
         ],
         'lighthouse': [
@@ -40,6 +40,9 @@ graph = {
     },
 
     'deposit_contract': {
+        'tooling': [
+            'https://github.com/CarlBeek/eth2.0-deposit-tooling.git',
+        ],
         'vyper': [
             'https://github.com/ethereum/deposit_contract.git',
             ('deposit_contract', 'https://github.com/ethereum/eth2.0-specs.git', '/deposit_contract'),
@@ -50,12 +53,6 @@ graph = {
     },
 
     'research': {
-        'implementations': [
-            'https://github.com/protolambda/lmd-ghost.git',
-            'https://github.com/protolambda/eth2-shuffle.git',
-            'https://github.com/CarlBeek/eth2.0-deposit-tooling.git',
-            'https://github.com/CarlBeek/CBC_LMD.git',
-        ],
         'papers': [
             ('lmd-ghost-casper-paper', 'https://git.overleaf.com/5c561e58be21326e99fdc90e')
         ]
@@ -81,10 +78,12 @@ graph = {
         ],
         'fork-choice': [
             'https://github.com/sigp/reduced_tree_fork_choice.git',
-
+            'https://github.com/protolambda/lmd-ghost.git',
+            'https://github.com/CarlBeek/CBC_LMD.git',
         ],
         'shuffling': [
             'https://github.com/sigp/shuffling_sandbox.git',
+            'https://github.com/protolambda/eth2-shuffle.git',
         ],
         'hacks': [
             'https://github.com/mkosowsk/Mytchmatic.git',
@@ -114,17 +113,17 @@ graph = {
         'configs': [
             ('spec-configs', 'https://github.com/ethereum/eth2.0-specs.git', '/configs')
         ],
-        'spec-tests': [
-            'https://github.com/ethereum/eth2.0-tests.git',
-            'https://github.com/ethereum/eth2.0-spec-tests.git',
-        ],
+        # 'spec-tests': [
+        #     'https://github.com/ethereum/eth2.0-tests.git',
+        #     'https://github.com/ethereum/eth2.0-spec-tests.git',
+        # ],
         'results': [
-            'https://github.com/status-im/nim-eth2-testnet-data.git',
+            # 'https://github.com/status-im/nim-eth2-testnet-data.git',
             'https://github.com/sigp/serenity-benches.git',
             'https://github.com/harmony-dev/eth2.0-benchmarks.git',
         ],
         'fuzzing': [
-            'https://github.com/guidovranken/eth2.0-fuzzing.git',
+            # 'https://github.com/guidovranken/eth2.0-fuzzing.git',
         ],
         'services': [
             ('whiteblock-genesis', 'https://github.com/whiteblock/genesis.git'),
@@ -148,19 +147,19 @@ graph = {
             ('lodestar-hobbits', 'https://github.com/ChainSafe/hobbits-ts.git'),
             ('yeeth-hobbits', 'https://github.com/yeeth/Hobbits.swift')
         },
-        'libp2p': {
-            'https://github.com/sigp/rust-libp2p.git',
-            'https://github.com/libp2p/go-libp2p.git',
-            'https://github.com/libp2p/js-libp2p.git',
-            'https://github.com/libp2p/rust-libp2p',
-            'https://github.com/libp2p/py-libp2p',
-            'https://github.com/libp2p/jvm-libp2p',
-        },
-        'libp2p-daemons': {
-            ('java-libp2p-daemon', 'https://github.com/jrhea/mothra.git'),
-            'https://github.com/libp2p/go-libp2p-daemon.git',
-            ('js-libp2p-deamon', 'https://github.com/libp2p/js-libp2p-daemon-client.git'),
-        },
+        # 'libp2p': {
+        #     'https://github.com/sigp/rust-libp2p.git',
+        #     'https://github.com/libp2p/go-libp2p.git',
+        #     'https://github.com/libp2p/js-libp2p.git',
+        #     'https://github.com/libp2p/rust-libp2p',
+        #     'https://github.com/libp2p/py-libp2p',
+        #     'https://github.com/libp2p/jvm-libp2p',
+        # },
+        # 'libp2p-daemons': {
+        #     ('java-libp2p-daemon', 'https://github.com/jrhea/mothra.git'),
+        #     'https://github.com/libp2p/go-libp2p-daemon.git',
+        #     ('js-libp2p-deamon', 'https://github.com/libp2p/js-libp2p-daemon-client.git'),
+        # },
         'gossipsub': [
             'https://github.com/ChainSafe/gossipsub-js.git',
         ],

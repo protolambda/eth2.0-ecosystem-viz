@@ -9,6 +9,9 @@ for repo_url, repo_paths in repos.items():
             # all fields would be: time, username, change mode, path
             fields = line.rsplit('|', 1)
 
+            if 'Godeps' in fields[1] or 'vendor' in fields[1] or 'node_modules' in fields[1]:
+                continue
+
             best_hit = ''
             best_data = None
             for path_prefix, path_data in repo_paths.items():
