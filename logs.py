@@ -3,7 +3,7 @@ from repos import url_to_out_name
 from prepare import repos
 import os
 
-dry = True
+dry = False
 
 
 def run(args, cwd=''):
@@ -19,7 +19,7 @@ for repo_url in repos.keys():
     out_path = os.path.join('logs_data', out_name)
     if os.path.exists(out_path):
         # delete old log
-        run(['rm', out_path], cwd=out_path)
+        run(['rm', out_path], cwd='.')
 
     # run gource
-    run(['gource', '--output-custom-log', out_path, os.path.join('repos', repo_name)])
+    run(['gource', '--output-custom-log', out_path, os.path.join('repos', repo_name)], cwd='.')

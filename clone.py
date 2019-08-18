@@ -3,7 +3,7 @@ from repos import url_to_out_name
 from prepare import repos
 import os
 
-dry = True
+dry = False
 
 
 def run(args, cwd=''):

@@ -5,4 +5,6 @@ logs_data
 remapped_logs
 !remapped_logs/.gitkeep
 
+combined.txt
+
 __pycache__

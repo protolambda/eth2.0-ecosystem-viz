@@ -18,4 +18,5 @@ for repo_url, repo_paths in repos.items():
                         best_hit = path_prefix
                         best_data = path_data
 
-            new.write(fields[0] + '|' + fields[1].replace(best_hit, '/'.join(best_data), 1))
+            if best_data is not None:
+                new.write(fields[0] + '|' + fields[1].replace(best_hit, '/'.join(best_data), 1))
